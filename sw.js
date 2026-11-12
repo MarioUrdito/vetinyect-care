@@ -1,4 +1,4 @@
-var C="vic-62cf1e60";
+var C="vic-6ec0c527";
 var CORE=["./","index.html","manifest.webmanifest","icon-192.png","icon-512.png","icon-180.png"];
 var EXTRA=["https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"];
 self.addEventListener("install",function(e){e.waitUntil(caches.open(C).then(function(c){return c.addAll(CORE).then(function(){return Promise.all(EXTRA.map(function(u){return c.add(u).catch(function(){})}))})}).then(function(){return self.skipWaiting()}))});
